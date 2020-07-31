@@ -1,0 +1,50 @@
+let arr=[1,2,3,4,5,6,7,8,9];
+let even=[];
+let odd=[];
+for(let i=0;i<arr.length;i++)
+{
+    if(arr[i]%2==0)
+    {
+     
+    even.push(arr[i]);
+    }
+    else
+    {
+      odd.push(arr[i]);
+    
+    }
+}
+for(let i=0;i<even.length-1;i++)
+{
+for(let j=0;j<even.length-1;j++)
+{
+  if(even[j]>even[j+1])
+  {
+   let temp=even[j];
+   even[j]=even[j+1];
+   even[j+1]=temp;
+  }
+}
+}
+console.log("Sorted even number array in ascending order");
+for(let j=0;j<even.length;j++)
+{
+  console.log(even[j]);
+}
+for(let i=0;i<odd.length-1;i++)
+{
+for(let j=0;j<odd.length-1;j++)
+{
+  if(odd[j]<odd[j+1])
+  {
+   let temp=odd[j];
+   odd[j]=odd[j+1];
+   odd[j+1]=temp;
+  }
+}
+}
+console.log("sorted odd number array in descending order ");
+for(let i=0;i<odd.length;i++)
+{
+ console.log(odd[i]);
+}
